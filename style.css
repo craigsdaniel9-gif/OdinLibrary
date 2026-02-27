@@ -1,0 +1,74 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 1rem ;
+}
+
+dialog{
+    padding: 3rem;
+    border:none;
+    border-radius: 8px;
+        
+}
+
+
+#book-form{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    padding: 4em 2.5em;
+    flex-direction: column;
+    gap: 1.5em;
+    background-color: #fdfbf5d3 ;
+    border-radius: 1.5em;
+}
+
+#book-form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+}
+
+#dialogheading{
+    font-size: 2em;
+    margin: 2em;
+    font-family: "Open Sans SemiBold";
+    color: #8f3e3e;
+}
+
+label{
+font-family: Verdana;
+font-size: 0.85rem;
+color: rgb(75, 75, 75);
+}
+
+input[type="text"], input[type="number"] {
+  border: none;
+  font-family: Verdana;
+  font-weight: 500;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-size: 16px;
+  background-color:rgba(230, 230, 230, 0.2);
+  border-radius: 0.75em;
+}
+
+#book-form > div > button{
+    color: red;
+    height: 3em;
+    padding: 0.5em auto;
+    font-size: 1em;
+    color: aliceblue;
+    border: none;
+    border-radius: 1.5em;
+}
+
+#book-form > div > button:hover{
+    filter: brightness(1.25);
+    box-shadow: 1.5px 1.5px 3.5px rgb(141, 131, 131) ;
+    transform: translateY(-5px);
+}
+
+#addbtn{background-color: brown;}
+#closebtn{background-color: rgb(49, 44, 44);}

@@ -7,8 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
 
+    <button id="createBookbtn">+</button>
+
+    <dialog id="input-dialog" open>
+        <form id="book-form">
+
+            <div id="dialogheading">
+                Add New Book
+            </div>
+
+            <div>
+                <label for="title-input">Enter Title</label>
+                <input type="text" name="title" id="title-input" required>
+            </div>
+
+            <div>
+                <label for="author-input">Author's Name</label>
+                <input type="text" name="author" id="author-input" required>
+            </div>
+
+            <div>
+                <label for="pages-input">Enter Number of Pages</label>
+                <input type="number" name="pages" id="pages-input" min="10" required>
+            </div>
+
+            <div>
+                <div>
+                <label>Reading Status</label>
+                <input type="radio" name="status" value="true" required> Finished
+                <input type="radio"  name="status" value="false" required> Unfinished
+                </div>
+              
+            </div>
+
+            <div class="btn">
+                <button type="submit" id="addbtn">Add To Library</button>
+                <button type="button" id="closebtn">Close</button>
+            </div>
+
+        </form>
+    </dialog>
+
+    <div id="library-container"></div>
 
     <script src="script.js"></script>
 </body>
