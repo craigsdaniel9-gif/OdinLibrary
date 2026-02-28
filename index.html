@@ -5,16 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  
 </head>
 <body>
 
-    <button id="createBookbtn">+</button>
+    <button id="createBookbtn"><i class="fa-solid fa-circle-plus"></i></button>
 
-    <dialog id="input-dialog" open>
+    <div class="hero">
+
+    <div class="text">
+        <div id="heading">OdinLibrary</div>
+        <div id="desc">
+            A state-driven JavaScript application that manages a collection of books using constructor functions and prototype methods. Books are dynamically created via a modal form and rendered from a centralized data array to ensure clean separation between data and UI. Each book instance maintains a unique identifier for reliable state manipulation, including removal and read-status toggling. The project emphasizes DOM–data synchronization, event handling, and scalable front-end architecture.
+        </div>
+    </div>
+
+    <div class="logo">
+        <i class="fa-solid fa-book"></i>
+    </div>
+
+</div>
+
+<div class="main" id="main">
+    
+<div class="book" id="123456">
+<h2>Title</h2>
+<h4>Author</h4>
+<div class="controls">
+    <button id="toggle"><i class="fa-solid fa-check"></i></button>
+    <button id="delete"><i class="fa-solid fa-trash"></i></button>
+</div>
+</div>
+
+
+</div>
+
+    <dialog id="input-dialog">
         <form id="book-form">
 
             <div id="dialogheading">
-                Add New Book
+                <i class="fa-solid fa-circle-plus"></i>Add New Book
             </div>
 
             <div>
@@ -51,6 +81,6 @@
 
     <div id="library-container"></div>
 
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>

@@ -4,15 +4,17 @@
 body{
     margin: 0px;
     padding: 1rem ;
+    width: 1000px;
+    margin: auto auto;
 }
 
 dialog{
     padding: 3rem;
-    border:none;
+    border: none;
     border-radius: 8px;
-        
+    background-color: rgba(255, 255, 255);
+      
 }
-
 
 #book-form{
     font-family: Arial, Helvetica, sans-serif;
@@ -32,15 +34,23 @@ dialog{
 
 #dialogheading{
     font-size: 2em;
-    margin: 2em;
+    margin: 1.75em;
     font-family: "Open Sans SemiBold";
     color: #8f3e3e;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
 }
 
 label{
 font-family: Verdana;
 font-size: 0.85rem;
 color: rgb(75, 75, 75);
+}
+
+label::backdrop{
+    background-color: red;
 }
 
 input[type="text"], input[type="number"] {
@@ -50,8 +60,17 @@ input[type="text"], input[type="number"] {
   padding: 0.8rem 1rem;
   font-size: 1rem;
   font-size: 16px;
-  background-color:rgba(230, 230, 230, 0.2);
+  background-color:rgba(172, 170, 170, 0.2);
   border-radius: 0.75em;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+  background-color:rgba(255, 255, 255, 0.6);
+  border: none;
+}
+
+input[type="text"]:hover, input[type="number"]:hover {
+  filter: brightness(1.2);
 }
 
 #book-form > div > button{
@@ -67,8 +86,121 @@ input[type="text"], input[type="number"] {
 #book-form > div > button:hover{
     filter: brightness(1.25);
     box-shadow: 1.5px 1.5px 3.5px rgb(141, 131, 131) ;
-    transform: translateY(-5px);
+    transform: translateY(-2.5px);
 }
 
 #addbtn{background-color: brown;}
 #closebtn{background-color: rgb(49, 44, 44);}
+
+#createBookbtn{
+    height: 1.75em;
+    width: 1.75em;
+    padding: 0px 0px;
+    border-radius: 50%;
+    border: none;
+    background-color: #dd6767;
+    color: #f3ede1 ;
+    font-size: 2em;
+    position: fixed;
+    bottom: 1.5em;
+    right: 1.5em;
+
+}
+
+#createBookbtn:hover{
+filter: brightness(1.1);
+transform: translateY(-3px);
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    gap: 1rem;
+    padding: 1.5em 2em;
+   
+}
+
+#heading{
+    font-size: 3em;
+    font-family: Open Sans;
+    font-weight: 700;
+    color: #a12828;
+}
+
+#desc{
+    font-family: Helvetica;
+    word-spacing: 20%;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    text-align: justify;
+    color: rgb(68, 68, 68);
+}
+.text {
+    flex: 0 0 80%;
+}
+
+.logo {
+    flex: 0 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;
+    color: #cc3c3c;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    width: 100%;
+    gap: 1rem;
+    padding: 2em 2em;
+   
+}
+
+.book{
+    border-bottom: 5px solid paleturquoise;
+    width: 100%;
+    height: fit-content;
+    padding: 1.75em 1.25em;
+    border-radius: 2em;
+    background-color: rgb(252, 252, 252);
+    box-shadow: 1px 1px 5px grey;
+}
+
+.book h2{
+    font-family: Helvetica;
+    color: rgb(76, 104, 156);
+    overflow: hidden;
+    
+}
+.book h4{
+    font-family: cascadia code;
+    color: rgb(117, 116, 116);
+
+}
+.controls{
+    display: flex;
+    gap: 1em;
+    
+}
+.controls button{
+    color: rgb(163, 48, 48);
+    height: 2em; 
+    width:2em;
+    padding: 0.5em 0.5em;
+    font-size: 1em;
+    color: rgb(233, 244, 253);
+    border: none;
+    border-radius: 1.5em;
+}
+
+#delete
+{background-color: rgb(209, 61, 90);
+
+
+}
+#toggle{background-color: green;}
